@@ -583,6 +583,46 @@ button { font: inherit; cursor: pointer; }
 .grid { display: grid; gap: 20px; }
 .grid-3 { grid-template-columns: repeat(3, 1fr); }
 
+/* Fit -------------------------------------------------------------------- */
+
+.fit-section {
+  padding: 72px 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.015), transparent);
+}
+.fit-head {
+  margin-bottom: 30px;
+}
+.fit-head h2 {
+  margin-bottom: 0;
+}
+.fit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.fit-chip {
+  min-height: 58px;
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.035);
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.fit-chip::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 18px var(--accent-glow);
+  flex: 0 0 8px;
+}
+
 /* Cards ------------------------------------------------------------------ */
 
 .card {
@@ -661,6 +701,11 @@ button { font: inherit; cursor: pointer; }
 
 /* Projects --------------------------------------------------------------- */
 
+.project-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  align-items: stretch;
+}
 .project {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -677,7 +722,7 @@ button { font: inherit; cursor: pointer; }
 
 .project-art {
   position: relative;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
   background: linear-gradient(160deg, #1a1d24 0%, #0e0f13 100%);
   overflow: hidden;
   border-bottom: 1px solid var(--border);
@@ -717,7 +762,7 @@ button { font: inherit; cursor: pointer; }
   z-index: 1;
 }
 
-.project-body { padding: 22px 24px 26px; }
+.project-body { padding: 28px 30px 32px; }
 .project-badges {
   display: flex;
   flex-wrap: wrap;
@@ -736,15 +781,16 @@ button { font: inherit; cursor: pointer; }
   color: var(--text-muted);
 }
 .project h3 {
-  font-size: 20px;
+  font-size: 24px;
   letter-spacing: -0.015em;
-  margin: 0 0 8px;
+  margin: 0 0 10px;
   font-weight: 600;
 }
 .project p {
   color: var(--text-muted);
   margin: 0;
-  font-size: 14.5px;
+  font-size: 16px;
+  line-height: 1.65;
 }
 
 /* Steps ------------------------------------------------------------------ */
@@ -896,6 +942,7 @@ button { font: inherit; cursor: pointer; }
 
 @media (max-width: 960px) {
   .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .fit-grid { grid-template-columns: repeat(2, 1fr); }
   .steps { grid-template-columns: repeat(2, 1fr); }
 
   .hero-inner {
@@ -919,6 +966,12 @@ button { font: inherit; cursor: pointer; }
   .hero-meta { grid-template-columns: 1fr; gap: 16px; }
 
   .grid-3 { grid-template-columns: 1fr; }
+  .fit-section { padding: 56px 0; }
+  .fit-grid,
+  .project-grid { grid-template-columns: 1fr; }
+  .project-body { padding: 24px 22px 28px; }
+  .project h3 { font-size: 22px; }
+  .project p { font-size: 15px; }
   .steps { grid-template-columns: 1fr; }
 
   .cta-card { padding: 44px 24px; }
