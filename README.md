@@ -64,5 +64,5 @@ Si el repositorio se llama `<tu-usuario>.github.io`, la página queda en `https:
 ## Contacto
 
 - WhatsApp: [2996209136](https://wa.me/542996209136)
-- Email: Marcoantoniolunavillegas@gmail.com
+- Email: marcoantoniolunavillegas@gmail.com
 - Ubicación: Neuquén, Argentina
