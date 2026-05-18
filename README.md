@@ -1,8 +1,8 @@
 # Luna Systems — Landing
 
-Landing comercial estática para **Luna Systems**. HTML, CSS y JavaScript vanilla. Sin frameworks, sin build, sin dependencias pesadas. Publicada en GitHub Pages con dominio propio.
+Landing comercial estática para **Luna Systems**. HTML, CSS y JavaScript vanilla. Sin frameworks, sin build, sin dependencias pesadas. Publicada en Vercel.
 
-**URL pública:** [https://lunasystems.com.ar](https://lunasystems.com.ar) · también disponible en `https://www.lunasystems.com.ar`
+**URL pública:** [https://luna-systems.vercel.app](https://luna-systems.vercel.app)
 
 ## Estructura
 
@@ -12,8 +12,7 @@ Landing comercial estática para **Luna Systems**. HTML, CSS y JavaScript vanill
 ├── styles.css        # Tema oscuro premium con variables y responsive
 ├── script.js         # Header scroll, menú móvil y reveal on scroll
 ├── README.md         # Esta guía
-├── CNAME             # Dominio personalizado para GitHub Pages (lunasystems.com.ar)
-├── .nojekyll         # Evita el procesamiento Jekyll en GitHub Pages
+├── .nojekyll         # Marca histórica para GitHub Pages (Vercel la ignora)
 └── assets/
     ├── favicon.svg   # Favicon con monograma LS
     ├── og/           # Imagen social preview
@@ -36,14 +35,14 @@ Luego abrir `http://localhost:5173`.
 
 ## Publicación
 
-La landing se publica con **GitHub Pages** sobre el repo `bitflowapp/luna-apps-systems-landing`, sirviéndose desde el dominio propio **lunasystems.com.ar** (registrado en NIC Argentina).
+La landing se publica con **Vercel** sobre el repo `bitflowapp/luna-apps-systems-landing`. Cada push a `main` dispara un deploy automático.
 
-El archivo `CNAME` en la raíz fija el dominio personalizado. La configuración DNS apunta el ápice a las IPs de GitHub Pages y `www` a `bitflowapp.github.io` (CNAME).
-
-En **Settings → Pages** debe quedar:
-- *Source:* rama `main`, carpeta `/ (root)`.
-- *Custom domain:* `lunasystems.com.ar`.
-- *Enforce HTTPS:* activado una vez emitido el certificado.
+Configuración en Vercel:
+- *Project name:* `luna-systems` (define `luna-systems.vercel.app`).
+- *Framework Preset:* `Other`.
+- *Build Command:* vacío.
+- *Output Directory:* vacío (raíz del repo).
+- *Install Command:* vacío.
 
 ## Personalización rápida
 
