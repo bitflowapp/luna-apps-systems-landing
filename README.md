@@ -1,6 +1,6 @@
-# Luna Apps & Systems — Landing
+# Luna Systems — Landing
 
-Landing comercial estática para **Luna Apps & Systems**. HTML, CSS y JavaScript vanilla. Sin frameworks, sin build, sin dependencias pesadas. Lista para publicar en GitHub Pages.
+Landing comercial estática para **Luna Systems**. HTML, CSS y JavaScript vanilla. Sin frameworks, sin build, sin dependencias pesadas. Lista para publicar en GitHub Pages.
 
 ## Estructura
 
@@ -12,7 +12,7 @@ Landing comercial estática para **Luna Apps & Systems**. HTML, CSS y JavaScript
 ├── README.md         # Esta guía
 ├── .nojekyll         # Evita el procesamiento Jekyll en GitHub Pages
 └── assets/
-    └── logo.png      # (Opcional) Si no existe, se muestra el monograma "LA&S"
+    └── logo.png      # (Opcional) Si no existe, se muestra el monograma "LS"
 ```
 
 ## Desarrollo local
@@ -55,7 +55,7 @@ Si el repositorio se llama `<tu-usuario>.github.io`, la página queda en `https:
 ## Personalización rápida
 
 - **Colores y tipografía:** variables CSS en `:root` dentro de `styles.css`.
-- **Logo:** colocar `assets/logo.png` (cuadrado, mínimo 128×128). Si no existe, se renderiza el monograma textual *LA&S*.
+- **Logo:** colocar `assets/logo.png` (cuadrado, mínimo 128×128). Si no existe, se renderiza el monograma textual *LS*.
 - **Textos:** todo el copy vive en `index.html`.
 - **WhatsApp:** los enlaces apuntan a `https://wa.me/542996209136`. Cambiar el número en los 3 botones del HTML para actualizar.
 
