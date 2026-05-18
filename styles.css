@@ -11,7 +11,7 @@
 
   --text: #f5f5f7;
   --text-muted: #a1a1a6;
-  --text-dim: #6e6e73;
+  --text-dim: #85858d;
 
   --accent: #2997ff;
   --accent-soft: #0a84ff;
@@ -559,6 +559,7 @@ button { font: inherit; cursor: pointer; }
 /* Sections --------------------------------------------------------------- */
 
 .section { padding: 96px 0; position: relative; }
+.section[id] { scroll-margin-top: 0; }
 .section-alt { background: var(--bg-elev); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 
 .section-head {
@@ -596,6 +597,9 @@ button { font: inherit; cursor: pointer; }
   margin-bottom: 0;
 }
 .fit-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
@@ -760,6 +764,10 @@ button { font: inherit; cursor: pointer; }
   height: 100%;
   object-fit: cover;
   z-index: 1;
+}
+.project-art-img-phone {
+  transform: scale(1.16);
+  transform-origin: center center;
 }
 
 .project-body { padding: 28px 30px 32px; }
@@ -982,6 +990,9 @@ button { font: inherit; cursor: pointer; }
 }
 
 @media (max-width: 480px) {
+  .hero-title { font-size: clamp(34px, 9vw, 40px); }
+  .hero-sub { margin-bottom: 30px; }
+  .hero-actions { margin-bottom: 46px; }
   .hero-card { padding: 18px; }
   .hero-mini-cards { gap: 8px; }
   .hero-mini { padding: 12px 10px; }

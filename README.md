@@ -12,7 +12,9 @@ Landing comercial estática para **Luna Systems**. HTML, CSS y JavaScript vanill
 ├── README.md         # Esta guía
 ├── .nojekyll         # Evita el procesamiento Jekyll en GitHub Pages
 └── assets/
-    └── logo.png      # (Opcional) Si no existe, se muestra el monograma "LS"
+    ├── favicon.svg   # Favicon con monograma LS
+    ├── og/           # Imagen social preview
+    └── projects/     # Capturas reales de Caja Clara y Bit Flow
 ```
 
 ## Desarrollo local
@@ -55,9 +57,9 @@ Si el repositorio se llama `<tu-usuario>.github.io`, la página queda en `https:
 ## Personalización rápida
 
 - **Colores y tipografía:** variables CSS en `:root` dentro de `styles.css`.
-- **Logo:** colocar `assets/logo.png` (cuadrado, mínimo 128×128). Si no existe, se renderiza el monograma textual *LS*.
+- **Marca:** el header y footer usan el monograma textual *LS* y el nombre Luna Systems.
 - **Textos:** todo el copy vive en `index.html`.
-- **WhatsApp:** los enlaces apuntan a `https://wa.me/542996209136`. Cambiar el número en los 3 botones del HTML para actualizar.
+- **WhatsApp:** los enlaces apuntan a `https://wa.me/542996209136`. Cambiar el número en los botones y el dato de contacto del HTML para actualizar.
 
 ## Contacto
 
