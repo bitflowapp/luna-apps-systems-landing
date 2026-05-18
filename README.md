@@ -1,6 +1,8 @@
 # Luna Systems — Landing
 
-Landing comercial estática para **Luna Systems**. HTML, CSS y JavaScript vanilla. Sin frameworks, sin build, sin dependencias pesadas. Lista para publicar en GitHub Pages.
+Landing comercial estática para **Luna Systems**. HTML, CSS y JavaScript vanilla. Sin frameworks, sin build, sin dependencias pesadas. Publicada en GitHub Pages con dominio propio.
+
+**URL pública:** [https://lunasystems.com.ar](https://lunasystems.com.ar) · también disponible en `https://www.lunasystems.com.ar`
 
 ## Estructura
 
@@ -10,6 +12,7 @@ Landing comercial estática para **Luna Systems**. HTML, CSS y JavaScript vanill
 ├── styles.css        # Tema oscuro premium con variables y responsive
 ├── script.js         # Header scroll, menú móvil y reveal on scroll
 ├── README.md         # Esta guía
+├── CNAME             # Dominio personalizado para GitHub Pages (lunasystems.com.ar)
 ├── .nojekyll         # Evita el procesamiento Jekyll en GitHub Pages
 └── assets/
     ├── favicon.svg   # Favicon con monograma LS
@@ -31,28 +34,16 @@ npx serve .
 
 Luego abrir `http://localhost:5173`.
 
-## Publicar en GitHub Pages
+## Publicación
 
-### Opción 1 — desde la rama principal
+La landing se publica con **GitHub Pages** sobre el repo `bitflowapp/luna-apps-systems-landing`, sirviéndose desde el dominio propio **lunasystems.com.ar** (registrado en NIC Argentina).
 
-1. Crear un repositorio en GitHub (por ejemplo `luna-apps-systems`).
-2. Subir el contenido de esta carpeta a la rama `main`.
-3. En el repositorio: **Settings → Pages**.
-4. En *Source* seleccionar **Deploy from a branch**.
-5. Elegir la rama `main` y la carpeta `/ (root)`.
-6. Guardar. En 1–2 minutos la página queda publicada en:
-   `https://<tu-usuario>.github.io/<nombre-repo>/`
+El archivo `CNAME` en la raíz fija el dominio personalizado. La configuración DNS apunta el ápice a las IPs de GitHub Pages y `www` a `bitflowapp.github.io` (CNAME).
 
-### Opción 2 — desde una rama de feature
-
-Esta versión vive en la rama `feat/luna-apps-systems-landing`. Para publicarla directamente:
-
-1. Subir la rama al remoto: `git push -u origin feat/luna-apps-systems-landing`
-2. En **Settings → Pages**, elegir esa rama como *Source*.
-
-### Opción 3 — dominio de usuario/organización
-
-Si el repositorio se llama `<tu-usuario>.github.io`, la página queda en `https://<tu-usuario>.github.io/` automáticamente.
+En **Settings → Pages** debe quedar:
+- *Source:* rama `main`, carpeta `/ (root)`.
+- *Custom domain:* `lunasystems.com.ar`.
+- *Enforce HTTPS:* activado una vez emitido el certificado.
 
 ## Personalización rápida
 
