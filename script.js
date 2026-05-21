@@ -5,6 +5,10 @@
   const navToggle = document.getElementById("navToggle");
   const mobileNav = document.getElementById("mobileNav");
   const yearEl = document.getElementById("year");
+  const videoModal = document.getElementById("videoModal");
+  const demoVideo = document.getElementById("demoVideo");
+  const videoModalTitle = document.getElementById("videoModalTitle");
+  let lastVideoTrigger = null;
 
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
@@ -60,5 +64,54 @@
     revealEls.forEach((el) => io.observe(el));
   } else {
     revealEls.forEach((el) => el.classList.add("is-visible"));
+  }
+
+  // Project video modal
+  if (videoModal && demoVideo && videoModalTitle) {
+    const openVideo = (trigger) => {
+      const src = trigger.getAttribute("data-video-src");
+      if (!src) return;
+
+      lastVideoTrigger = trigger;
+      videoModalTitle.textContent = trigger.getAttribute("data-video-title") || "Demo";
+      demoVideo.poster = trigger.getAttribute("data-video-poster") || "";
+      demoVideo.src = src;
+      demoVideo.load();
+
+      videoModal.classList.add("is-open");
+      videoModal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("modal-open");
+
+      const closeButton = videoModal.querySelector(".video-modal-close");
+      if (closeButton) closeButton.focus({ preventScroll: true });
+    };
+
+    const closeVideo = () => {
+      if (!videoModal.classList.contains("is-open")) return;
+
+      demoVideo.pause();
+      demoVideo.removeAttribute("src");
+      demoVideo.removeAttribute("poster");
+      demoVideo.load();
+
+      videoModal.classList.remove("is-open");
+      videoModal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("modal-open");
+
+      if (lastVideoTrigger) lastVideoTrigger.focus({ preventScroll: true });
+      lastVideoTrigger = null;
+    };
+
+    document.querySelectorAll("[data-video-src]").forEach((trigger) => {
+      trigger.addEventListener("click", () => openVideo(trigger));
+    });
+
+    videoModal.querySelectorAll("[data-modal-close]").forEach((trigger) => {
+      trigger.addEventListener("click", closeVideo);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeVideo();
+    });
   }
 })();

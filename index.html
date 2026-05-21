@@ -241,42 +241,69 @@
       </div>
     </section>
 
-    <section class="section section-alt" id="proyectos">
+    <section class="section section-alt projects-section" id="proyectos">
       <div class="container">
         <header class="section-head">
           <p class="eyebrow"><span class="eyebrow-dot"></span>Proyectos</p>
-          <h2>Dos formas concretas de ordenar un negocio.</h2>
-          <p class="section-lead">Caja Clara se enfoca en gestión comercial. Bit Flow se enfoca en registros técnicos de campo. Ambos muestran el tipo de soluciones prácticas que desarrolla Luna Systems.</p>
+          <h2>Proyectos reales</h2>
+          <p class="section-lead">Software en desarrollo para comercios, técnicos y empresas.</p>
         </header>
 
         <div class="grid project-grid">
           <article class="project reveal" data-reveal>
-            <div class="project-art">
-              <span class="project-art-monogram">CC</span>
-              <img class="project-art-img" src="assets/projects/caja-clara.jpg" alt="Interfaz de Caja Clara con catálogo, productos, ventas y control de caja" width="1600" height="1000" loading="lazy" decoding="async" onerror="this.remove()">
+            <button class="project-media" type="button" data-video-src="assets/videos/luna-apps-demo.mp4" data-video-poster="assets/projects/luna-apps-demo.jpg" data-video-title="Luna Apps & Systems">
+              <img class="project-poster" src="assets/projects/luna-apps-demo.jpg" alt="Demo general de Luna Apps & Systems" width="1280" height="720" loading="lazy" decoding="async">
+              <span class="project-play" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 16 16" fill="none"><path d="M5.5 3.7v8.6L12 8 5.5 3.7Z" fill="currentColor"/></svg>
+              </span>
+              <span class="sr-only">Ver demo general</span>
+            </button>
+            <div class="project-body">
+              <div class="project-badges">
+                <span class="badge">GENERAL</span>
+                <span class="badge">SOFTWARE</span>
+              </div>
+              <h3>Luna Apps & Systems</h3>
+              <p>Una línea de software enfocada en herramientas simples, reales y útiles para el trabajo diario.</p>
+              <button class="btn btn-ghost project-cta" type="button" data-video-src="assets/videos/luna-apps-demo.mp4" data-video-poster="assets/projects/luna-apps-demo.jpg" data-video-title="Luna Apps & Systems">Ver demo general</button>
             </div>
+          </article>
+
+          <article class="project reveal" data-reveal>
+            <button class="project-media" type="button" data-video-src="assets/videos/caja-clara-demo.mp4" data-video-poster="assets/projects/caja-clara-demo.jpg" data-video-title="Caja Clara">
+              <img class="project-poster" src="assets/projects/caja-clara-demo.jpg" alt="Demo real de Caja Clara" width="1280" height="720" loading="lazy" decoding="async">
+              <span class="project-play" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 16 16" fill="none"><path d="M5.5 3.7v8.6L12 8 5.5 3.7Z" fill="currentColor"/></svg>
+              </span>
+              <span class="sr-only">Ver Caja Clara</span>
+            </button>
             <div class="project-body">
               <div class="project-badges">
                 <span class="badge">CAJA</span>
                 <span class="badge">VENTAS</span>
               </div>
               <h3>Caja Clara</h3>
-              <p>Sistema para comercios que necesitan vender, controlar caja y entender sus números sin depender de planillas sueltas.</p>
+              <p>Gestión simple para ventas, gastos, caja y productos en comercios chicos y medianos.</p>
+              <button class="btn btn-ghost project-cta" type="button" data-video-src="assets/videos/caja-clara-demo.mp4" data-video-poster="assets/projects/caja-clara-demo.jpg" data-video-title="Caja Clara">Ver Caja Clara</button>
             </div>
           </article>
 
           <article class="project reveal" data-reveal>
-            <div class="project-art">
-              <span class="project-art-monogram">BF</span>
-              <img class="project-art-img project-art-img-phone" src="assets/projects/bitflow.jpg" alt="Interfaz móvil de Bit Flow con registros técnicos de campo" width="1600" height="1000" loading="lazy" decoding="async" onerror="this.remove()">
-            </div>
+            <button class="project-media" type="button" data-video-src="assets/videos/bitflow-demo.mp4" data-video-poster="assets/projects/bitflow-demo.jpg" data-video-title="BitFlow">
+              <img class="project-poster" src="assets/projects/bitflow-demo.jpg" alt="Demo real de BitFlow" width="1280" height="720" loading="lazy" decoding="async">
+              <span class="project-play" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 16 16" fill="none"><path d="M5.5 3.7v8.6L12 8 5.5 3.7Z" fill="currentColor"/></svg>
+              </span>
+              <span class="sr-only">Ver BitFlow</span>
+            </button>
             <div class="project-body">
               <div class="project-badges">
                 <span class="badge">DATOS</span>
                 <span class="badge">CAMPO</span>
               </div>
-              <h3>Bit Flow</h3>
-              <p>Herramienta para equipos de campo que registran datos técnicos, evidencia, ubicación y exportan reportes con más trazabilidad.</p>
+              <h3>BitFlow</h3>
+              <p>Planillas técnicas, evidencias de campo y exportación profesional para relevamientos.</p>
+              <button class="btn btn-ghost project-cta" type="button" data-video-src="assets/videos/bitflow-demo.mp4" data-video-poster="assets/projects/bitflow-demo.jpg" data-video-title="BitFlow">Ver BitFlow</button>
             </div>
           </article>
         </div>
@@ -356,6 +383,19 @@
       <p class="footer-meta">© <span id="year"></span> Luna Systems · Neuquén, Argentina</p>
     </div>
   </footer>
+
+  <div class="video-modal" id="videoModal" aria-hidden="true">
+    <div class="video-modal-backdrop" data-modal-close></div>
+    <div class="video-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="videoModalTitle">
+      <div class="video-modal-head">
+        <h2 id="videoModalTitle">Demo</h2>
+        <button class="video-modal-close" type="button" aria-label="Cerrar video" data-modal-close>
+          <svg width="20" height="20" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <video id="demoVideo" class="video-modal-player" controls preload="metadata" playsinline></video>
+    </div>
+  </div>
 
   <script src="script.js" defer></script>
 </body>
