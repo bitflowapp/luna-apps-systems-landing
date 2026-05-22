@@ -9,7 +9,7 @@ Landing comercial estática para **Luna Systems**. HTML, CSS y JavaScript vanill
 ```
 .
 ├── index.html        # Estructura semántica de la landing
-├── styles.css        # Tema oscuro premium con variables y responsive
+├── styles.css        # Tema claro premium con variables y responsive
 ├── script.js         # Header scroll, menú móvil y reveal on scroll
 ├── README.md         # Esta guía
 ├── .nojekyll         # Marca histórica para GitHub Pages (Vercel la ignora)
