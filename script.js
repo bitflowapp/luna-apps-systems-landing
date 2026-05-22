@@ -47,8 +47,12 @@
     });
   }
 
-  // Reveal on scroll
+  // Reveal on scroll — progressive enhancement only.
+  // Content is visible by default; this adds a subtle entrance and
+  // never leaves anything permanently hidden.
   const revealEls = document.querySelectorAll("[data-reveal]");
+  const revealAll = () => revealEls.forEach((el) => el.classList.add("is-visible"));
+
   if ("IntersectionObserver" in window && revealEls.length) {
     const io = new IntersectionObserver(
       (entries) => {
@@ -62,8 +66,10 @@
       { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
     );
     revealEls.forEach((el) => io.observe(el));
+    // Failsafe: if the observer never fires, reveal everything anyway.
+    window.setTimeout(revealAll, 2400);
   } else {
-    revealEls.forEach((el) => el.classList.add("is-visible"));
+    revealAll();
   }
 
   // Project video modal
