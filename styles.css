@@ -760,6 +760,44 @@ h1, h2, h3 { font-weight: 700; }
   flex: 0 0 9px;
 }
 
+/* Problems --------------------------------------------------------------- */
+
+.problems-section {
+  padding-top: 86px;
+}
+.problems-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+}
+.problem-card {
+  min-width: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 20px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s var(--ease), border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+.problem-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow);
+}
+.problem-card h3 {
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  margin: 0 0 8px;
+  color: var(--ink);
+}
+.problem-card p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+
 /* Benefits --------------------------------------------------------------- */
 
 .benefit {
@@ -903,9 +941,35 @@ h1, h2, h3 { font-weight: 700; }
 }
 .project p {
   color: var(--text-muted);
-  margin: 0 0 22px;
+  margin: 0 0 16px;
   font-size: 14.5px;
   line-height: 1.6;
+}
+.project-features {
+  list-style: none;
+  margin: 0 0 22px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.project-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 13.5px;
+  line-height: 1.4;
+}
+.project-features li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  margin-top: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+  flex: 0 0 6px;
 }
 .project-cta {
   margin-top: auto;
@@ -1231,6 +1295,38 @@ h1, h2, h3 { font-weight: 700; }
   margin: 0;
 }
 
+/* Floating WhatsApp ------------------------------------------------------ */
+
+.whatsapp-float {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 90;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 12px 18px 12px 15px;
+  border-radius: 999px;
+  background: #25d366;
+  color: #fff;
+  font-size: 14.5px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  box-shadow: 0 10px 26px -12px rgba(18, 140, 85, 0.7), 0 2px 5px rgba(15, 18, 30, 0.12);
+  transition: transform 0.18s var(--ease), box-shadow 0.2s var(--ease), background 0.2s var(--ease);
+}
+.whatsapp-float:hover {
+  background: #1fc15d;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px -14px rgba(18, 140, 85, 0.78), 0 3px 7px rgba(15, 18, 30, 0.14);
+}
+.whatsapp-float svg {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+}
+
 /* Reveal animation ------------------------------------------------------- */
 /* Content is visible by default. The entrance animation is enabled only
    when JS confirms motion is allowed (html.js-anim), so the landing is
@@ -1253,6 +1349,7 @@ h1, h2, h3 { font-weight: 700; }
   .grid-3 { grid-template-columns: repeat(2, 1fr); }
   .steps { grid-template-columns: repeat(3, 1fr); }
   .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .problems-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
   .hero-inner { grid-template-columns: 1fr; }
   .hero-content { max-width: 640px; }
@@ -1279,6 +1376,7 @@ h1, h2, h3 { font-weight: 700; }
 
   .grid-3 { grid-template-columns: 1fr; }
   .fit-grid { grid-template-columns: 1fr; }
+  .problems-grid { grid-template-columns: 1fr; }
   .project-grid { grid-template-columns: 1fr; }
   .steps { grid-template-columns: 1fr; }
 
@@ -1288,7 +1386,16 @@ h1, h2, h3 { font-weight: 700; }
   .cta-meta li { align-items: center; }
   .cta-actions .btn { flex: 1 1 auto; }
 
+  .site-footer { padding-bottom: 92px; }
   .footer-inner { flex-direction: column; align-items: flex-start; gap: 20px; }
+
+  .whatsapp-float {
+    left: 18px;
+    right: 18px;
+    bottom: max(14px, env(safe-area-inset-bottom));
+    justify-content: center;
+    min-height: 50px;
+  }
 
   .video-modal { padding: 14px; }
   .video-modal-dialog { max-height: calc(100vh - 28px); border-radius: 16px; }
@@ -1307,6 +1414,7 @@ h1, h2, h3 { font-weight: 700; }
   .benefit { padding: 24px; }
   .trust-item { padding: 20px; gap: 13px; }
   .step { padding: 22px 20px; }
+  .problem-card { padding: 20px; }
   .section-head h2 { font-size: clamp(24px, 7vw, 30px); }
   .video-modal-head h2 { font-size: 15px; }
 }
