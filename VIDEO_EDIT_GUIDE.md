@@ -134,7 +134,7 @@ Sin audio, escalado a 960px, ~150 KB.
 
 - No inventar pantallas que no existen en el producto.
 - No usar IA generativa para "rellenar" UI faltante.
-- Si un producto no tiene demo real (Ojo Claro IA / Estela), no se filma. Se deja como "En desarrollo" en la landing.
+- Si un producto no tiene demo real (Estela), no se filma. Se deja como "En desarrollo" en la landing.
 - No agregar mockups falsos al video general.
 - No usar música de stock con vocals.
 
@@ -143,4 +143,4 @@ Sin audio, escalado a 960px, ~150 KB.
 1. **Acortar el demo general** a 40 s (comando 1 arriba). Es el cambio de mayor impacto.
 2. **Grabar el cierre con logo** (3 s) si no está, e insertarlo en los tres demos.
 3. **Quemar los textos del guion** sobre los videos para que se entiendan en mute (la mayoría ve la web sin sonido).
-4. Cuando esté listo Ojo Claro IA / Estela, grabar su demo siguiendo el mismo formato 0:30.
+4. Cuando esté lista Estela, grabar su demo siguiendo el mismo formato 0:30.

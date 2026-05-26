@@ -788,7 +788,7 @@ h1, h2, h3 { font-weight: 700; }
 }
 .project-cta svg { color: var(--ink); }
 
-/* Products (3 cards: Caja Clara, BitFlow, Ojo Claro IA) ----------------- */
+/* Products (3 cards: Caja Clara, BitFlow, Estela) ---------------------- */
 
 .products-grid {
   display: grid;
@@ -826,12 +826,6 @@ h1, h2, h3 { font-weight: 700; }
   margin: 0;
   color: var(--ink);
   letter-spacing: -0.02em;
-}
-.product-alt {
-  color: var(--text-dim);
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: -0.01em;
 }
 .product-pill {
   align-self: flex-start;
